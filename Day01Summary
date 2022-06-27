@@ -1,0 +1,9 @@
+Day One Summary:
+  Introduction to AWS infrastructure and organization (How it is distributed)
+    Regions(US West, US East, Europe)
+  Introduction and overview of Amazon CloudFront
+    Amason S3, EC2
+  Data and organizations
+    Root account
+    User accounts within the organization
+    Automation tools 
