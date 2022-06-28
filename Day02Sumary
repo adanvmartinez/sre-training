@@ -1,0 +1,17 @@
+VPC: Virtual Private Cloud	
+	Different regions already exist managed by aws
+	Can create VPC containing virtual subnets within it
+	Can isolate them from each other or the internet
+	
+
+Security
+	ACL are at subnet level
+	Security groups are at VPC level
+	Security groups deny by default
+
+
+NAT Gateways
+	Used to give internet access to subnets
+	One NAT gateway for every VPC
+	Private connection is translated into public address
+	NAT Gateways are managed by aws, while NAT instances are managed by users individually
