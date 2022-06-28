@@ -1,28 +1,18 @@
-IAM: Identity and Access Management
-	Similart to Active Directory
-	Explicit Deny (user will have no access, unless specified)
-	Accounts other than the root account cannot see billing preferences (Unless given access)
-	Can create Users, Groups, and Roles
-	Can create policies and assign to groups
-	Policies are a way to limit access to services
-	
+My understanding of SRE Day Two Topics
 
+IAM is an identity and Access management tool similar to active directory used to allows users
+to resources. It explicitly denies access, unless whitelisted. Root account is initially the only
+one responsible for billing setting, unless another IAM user us granted permission to do such task.
+Within IAM, User accounts can be created, as well as Groups of users and Roles. These groups can be 
+assigned certain access policies. These policies can be created within the IAM service, and they limit
+access to services.
 
-VPC: Virtual Private Cloud	
-	Different regions already exist managed by aws (US-west, US-east, etc..)
-	Can create VPC containing virtual subnets within each region
-	Can isolate them from each other or the internet
-	Can create subnets within VPCs and link them
-	
-
-Security
-	ACL are at subnet level
-	Security groups are at VPC level
-	Security groups deny by default
-
+Virtual Private Cloud
+VPCs can be created in existing reagions managed by AWS (us-west, us-east, etc..)
+These VPCs can contain Virtual subnets within them. These can be isolated from the internet. A link \
+can be created between subnets to allow for internet access through a NAT table.
 
 NAT Gateways
-	Used to give internet access to subnets
-	One NAT gateway for every VPC
-	Private connection is translated into public address
-	NAT Gateways are managed by aws, while NAT instances are managed by users individually
+These are used to give internet access to subnets. This way, the private connection of subnets is 
+translated into a public address/traffic. These NAT gateways are managed by AWS, whereas, if an NAT 
+instance is created, it would have to be managed by the user that created it. 
