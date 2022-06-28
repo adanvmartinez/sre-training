@@ -1,7 +1,18 @@
+IAM: Identity and Access Management
+	Similart to Active Directory
+	Explicit Deny (user will have no access, unless specified)
+	Accounts other than the root account cannot see billing preferences (Unless given access)
+	Can create Users, Groups, and Roles
+	Can create policies and assign to groups
+	Policies are a way to limit access to services
+	
+
+
 VPC: Virtual Private Cloud	
-	Different regions already exist managed by aws
-	Can create VPC containing virtual subnets within it
+	Different regions already exist managed by aws (US-west, US-east, etc..)
+	Can create VPC containing virtual subnets within each region
 	Can isolate them from each other or the internet
+	Can create subnets within VPCs and link them
 	
 
 Security
