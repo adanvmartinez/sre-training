@@ -1,0 +1,26 @@
+Day 4 Assignment Notes
+	Create an RDS on a private network and create a EC2 instance on a public subnet with access 
+to internet. EC2 instance must be able to access RDS instance, but RDs instance may not have public
+access. Once those two are communicating, create an application to display DB connection to the public.
+
+
+Day 4 Assignment Steps
+
+	-First, I created a VPC
+	-Next, I created two subnets on the VPC, one private and one public.
+	-After that, I created two route tables. One public and one private.
+	-Once I created the route tables, I created an Internet Gateway and attached it to the VPC
+	-Next, I attached route tables to their respective subnets.
+	-Then, I set the public route table as the main route table.
+	-Then, I created an EC2 and RDS instace.
+	-After that, I creted a security policy for EC2 to allow traffic on SSH port and HTTP port
+	-Once that was added, I edited the security group for RDS and added the ID for the EC2 security 
+		group so that it allows all traffic (this is called a nested security group).
+	-Once that was completed, I ran mysql command fron EC2 terminal to make sure that it was able
+		to connect to RDS instance, and it was successful.
+	-Once the EC2 instance had connection with RDS, I installed NGINX on the EC2 instance, and 
+		modified the configuration to run serve a php script that I created. This php file is a
+		a simple db connection that queries the tables table on the informatio_schema.
+	-After the script file was finished and configuration was updated, I was able to access the 
+		application from the internet and it displays table names from the RDS instance. This mean
+		that I bealieve the assignment conditions were met.
