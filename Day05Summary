@@ -1,0 +1,10 @@
+Day 5 Assignment Instructions
+  Further impro assignment from day 4 by implementing insertion into the RDS database.
+
+My implementation: 
+  I moved away from my PHP script from the previous day and decided to set up a Node server instead.
+I used NGINX as a reverse proxy server that directs requests to localhost on port 3000, where the node
+application will listen on. After configuring NGINX, I wrote the node application to take get requests
+for the html and another for the javascript file that takes care of making another get request to get the
+data from database to the front end. After that, I updated the landing page route to make a insert
+statement to the database every time a quest comes in. The result can be viewed on the website.
