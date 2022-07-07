@@ -3,7 +3,7 @@
 
 //console.log('Index.js sadfsdf');
 
-window.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', (event) => {
 
         const  getData = async ()=>{
                 const result = await fetch('/visits');
